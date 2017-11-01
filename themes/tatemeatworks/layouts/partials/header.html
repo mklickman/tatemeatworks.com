@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html{{ with .Params.htmlclass }} class="{{ . }}"{{ end }}>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Tate Meatworks{{ with .Title}} | {{ . }}{{ end }}</title>
+  
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="icon" href=" /images/favicon.png ">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <!--
+    <link rel="apple-touch-icon" href="<%= asset_path 'apple-touch-icon.png' %>"/>
+    <link rel="icon" href=" <%= asset_path 'favicon.png' %> ">
+  -->
+
+  <script src="//www.google-analytics.com/ga.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      {{ $currentNode := . }}
+      <nav>
+          {{ range .Site.Menus.main }}
+              {{ if $currentNode.IsHome }}
+                  <a href="{{ .URL }}"><span>{{ .Name }}</span></a>
+              {{ else }}
+                  <a href="{{ .URL }}" {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}class="active"{{ end }}><span>{{ .Name }}</span></a>
+              {{ end }}
+          {{ end }}
+          <a href="menu.html" class="btn">Order Online</a>
+      </nav>
+    </header>
+    <div class="main">

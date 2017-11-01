@@ -1,0 +1,25 @@
+baseURL = "http://tatemeatworks.com"
+languageCode = "en-us"
+title = "Tate Meatworks"
+theme = "tatemeatworks"
+uglyURLs = true
+sectionPagesMenu = "main"
+
+[menus]
+    [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = "1"
+
+    [[menu.main]]
+    identifier = "menu"
+    name = "Menu"
+    url = "/menu.html"
+    weight = "2"
+
+    [[menu.main]]
+    identifier = "about"
+    name = "About Us"
+    url = "/about.html"
+    weight = "3"
