@@ -1,6 +1,6 @@
 baseURL = "http://tatemeatworks.com"
 languageCode = "en-us"
-title = "Tate Meatworks"
+title = "The Best Cuts of Meat in Spartanburg, Period."
 theme = "tatemeatworks"
 uglyURLs = true
 sectionPagesMenu = "main"
