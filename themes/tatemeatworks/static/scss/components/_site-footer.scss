@@ -1,0 +1,103 @@
+.site-footer {
+    background: $red-primary;
+    color: white;
+    padding: 2.5rem 0 4rem;
+
+    .flex-column {
+        flex-basis: 33% !important;
+
+        // &:nth-child(2n) {
+        //     text-align: center;
+        // }
+    }
+
+    a {
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover address {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-section {
+    font-size: 1.25rem;
+    text-align: left;
+    margin-bottom: 2.75rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer-section-heading {
+    font-size: 1.25rem;
+    font-family: 'nexa rust sans';
+}
+
+.hours-row {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.25;
+}
+
+.hours-label {
+    display: inline-block;
+    width: 11rem;
+}
+
+.footer-logo {
+    background: $red-primary;
+    box-sizing: border-box;
+    border-radius: 100%;
+    display: inline-block;
+    overflow: hidden;
+    padding: 50px 70px 35px;
+    position: relative;
+    margin-top: -6rem;
+    width: 350px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.footer-contact-info {
+    color: white;
+    font-family: 'nexa rust sans';
+    font-size: 1.125rem;
+    text-decoration: none;
+}
+
+.social-links-heading {
+    font-family: 'nexa rust sans';
+    font-size: 1.25rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    display: inline-block;
+
+    .or {
+        color: #ffa8a8;
+        font-family: "yesteryear";
+        font-size: 2.25rem;
+        line-height: .75;
+    }
+}
+
+.social-links a {
+    margin-right: 1.5rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.copyright-text {
+    color: $red-primary;
+    font-size: 1rem;
+    margin: .6rem 0;
+}

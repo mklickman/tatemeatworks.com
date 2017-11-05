@@ -1,6 +1,9 @@
-console.log(`PRIORITY ONE
-INSURE RETURN OF ORGANISM
-FOR ANALYSIS.
-ALL OTHER CONSIDERATIONS SECONDARY.
-CREW EXPENDABLE.
-`);
+(function(window, $) {
+    $(document).ready(function() {
+
+        // Update the copyright year in the footer to be current
+        var curYear = new Date().getFullYear();
+        $('.copyright-year').text(curYear);
+
+    });
+})(window, jQuery);

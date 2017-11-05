@@ -1,0 +1,44 @@
+.main-nav {
+    background: white;
+    padding: .85rem 0;
+
+    .btn {
+        flex-basis: 25% !important;
+    }
+}
+
+.main-nav-link {
+    color: $red-primary;
+    display: inline-block;
+    font-family: "yesteryear";
+    font-size: 1.875rem;
+    font-weight: lighter;
+    flex-basis: 25% !important;
+    text-decoration: none;
+
+    &:nth-child(2n) {
+        margin-right: 150px;
+    }
+
+    &:nth-child(3n) {
+        margin-left: 150px;
+    }
+
+    span {
+        position: relative;
+    }
+
+    &.--active {
+        span:before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0.6rem;
+            left: -4px;
+            width: 105%;
+            height: 2px;
+            background: $red-primary;
+
+        }
+    }
+}

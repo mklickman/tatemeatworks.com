@@ -1,0 +1,14 @@
+// For more information on styling pages, see the "7-1 pattern" documentation:
+// https://sass-guidelin.es/#the-7-1-pattern
+
+.page-about {
+
+    .page-header {
+        background-image: url('../images/cattle-grazing-1800w.jpg');
+        padding-top: 15rem;
+    }
+
+    .page-title {
+        margin-bottom: 0;
+    }
+}

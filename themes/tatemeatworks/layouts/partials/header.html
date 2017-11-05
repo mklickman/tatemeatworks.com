@@ -1,8 +1,15 @@
 <!DOCTYPE html>
-<html{{ with .Params.htmlclass }} class="{{ . }}"{{ end }}>
+
+{{ if isset .Params "htmlclass" }}
+  <html{{ with .Params.htmlclass }} class="{{ . }}"{{ end }}>
+{{ else }}
+  <html class="page-home">
+{{ end }}
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Tate Meatworks{{ with .Title}} | {{ . }}{{ end }}</title>
   
@@ -21,18 +28,26 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      {{ $currentNode := . }}
-      <nav>
-          {{ range .Site.Menus.main }}
-              {{ if $currentNode.IsHome }}
-                  <a href="{{ .URL }}"><span>{{ .Name }}</span></a>
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="/images/tate-meatworks-logo.svg" alt="Tate Meatworks Butcher Shop | Aged & Heritage Breed Offerings">
+    </div><!-- .logo-container -->
+
+    {{ $currentNode := . }}
+    <nav class="main-nav">
+      <div class="container --flex-container">
+        {{ range .Site.Menus.main }}
+            {{ if $currentNode.IsHome }}
+                <a href="{{ .URL }}" class="main-nav-link"><span>{{ .Name }}</span></a>
+            {{ else }}
+              {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
+                <a href="{{ .URL }}" class="main-nav-link --active"><span>{{ .Name }}</span></a>
               {{ else }}
-                  <a href="{{ .URL }}" {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}class="active"{{ end }}><span>{{ .Name }}</span></a>
+                <a href="{{ .URL }}" class="main-nav-link"><span>{{ .Name }}</span></a>
               {{ end }}
-          {{ end }}
-          <a href="menu.html" class="btn">Order Online</a>
-      </nav>
-    </header>
-    <div class="main">
+            {{ end }}
+        {{ end }}
+        <a href="/menu" class="btn">Order Online</a>
+      </div><!-- .container -->
+    </nav><!-- .main-nav -->
+  </header><!-- .site-header -->

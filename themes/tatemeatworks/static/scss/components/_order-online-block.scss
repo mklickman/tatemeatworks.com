@@ -1,0 +1,34 @@
+.order-online-block {
+    background-image: url('../images/brown-paper-portrait.jpg');
+    background-size: cover;
+    box-sizing: border-box;
+    min-width: 315px;
+    padding: 2.25rem;
+
+    .btn {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+}
+
+.order-online-header {
+    color: #492e17;
+    font-family: "nexa rust slab";
+    font-size: 2.25rem;
+    
+    .and {
+        font-family: "yesteryear";
+        font-size: 3rem;
+    }
+
+    .dash {
+        color: $red-primary;
+        font-family: sans-serif;
+    }
+}
+
+p.order-online-text {
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}

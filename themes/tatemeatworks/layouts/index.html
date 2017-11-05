@@ -1,5 +1,71 @@
 {{ partial "header.html" . }}
 
-  <h1>The best cuts of meat in Spartanburg. <span class="highlight">Period.</span></h1>
+  <section class="site-page">
+    <div class="page-header">
+      <div class="container">
+        <h1 class="page-title">
+          The best cuts of meat<br>
+          in Spartanburg.<br>
+          <span class="highlight">Period.</span>
+        </h1>
+        <a href="menu.html" class="btn btn-large btn-script">See Our Menu</a>
+      </div><!-- .container -->
+    </div><!-- .page-header -->
+
+    <div class="page-block">
+      <div class="container">
+        <h2 class="page-block-heading">A Cut Above Everything Else</h2>
+        <p class="page-block-intro">The search has finally ended. If you've been looking for the best cuts that money can buy, then look no further. Stop into our shop any time, and we'll gladly show you what's on the market, suggest cuts you may not know about, and tell you what'll get you the most bang for your buck. Whether you're a seasoned connoisseur, or have no idea where to start, we'll help you find what you're looking for.</p>
+
+        <div class="animal-grid">
+
+          <div class="animal --cow" style="background-image: url('/images/illustrated-cow.png');">
+            <h3 class="animal-title">Angus, Prime, &amp;<br>Wagyu Beef</h3>
+            <p>Ribeye, shortloin, strip, sirloin, and chuckroll. Aged a minimum of 21 days, no exceptions.</p>
+          </div>
+          <div class="animal --pig" style="background-image: url('/images/illustrated-pig.png');">
+            <h3 class="animal-title">Heritage Breed<br>Pork</h3>
+            <p>Additional Berkshire and Duroc offerings of loins (bone-in and boneless), 10-rib racks, 2-up baby backs, tenders, and butts.</p>
+          </div>
+          <div class="animal --chicken" style="background-image: url('/images/illustrated-chicken.png');">
+            <h3 class="animal-title" style="margin-bottom: 2.3rem;">Heritage Breed Chicken</h3>
+            <p>Premium selections of boneless breasts, and whole birds (without giblets).</p>
+          </div>
+          <div class="animal --lamb" style="background-image: url('/images/illustrated-lamb.png');">
+            <h3 class="animal-title">Lamb &amp; Veal</h3>
+            <p>Lamb racks, boneless legs (boned, rolled, &amp; tied), and bone-in legs. Milk-fed veal racks, and top round cutlets.</p>
+          </div>
+          <div class="animal --bacon" style="background-image: url('/images/illustrated-bacon.png');">
+            <h3 class="animal-title">Bacon &amp; Sausage</h3>
+            <p>Applewood smoked bacon, Big Fork Brand(R) bacon sausage, Italian sausages, and charcuterie.</p>
+          </div>
+          <div class="animal --crab" style="background-image: url('/images/illustrated-crab.png');">
+            <h3 class="animal-title">Seafood</h3>
+            <p>Scottish/Faroe Island salmon fillets, blue crab meat, 6/7 oz Maine lobster tails, and 26-30 shrimp (peeled and de-veined, tail off)</p>
+          </div>
+        </div><!-- animal-grid -->
+        <a href="menu.html" class="btn btn-large">Place an Order For Pickup</a>
+      </div><!-- .container -->
+    </div><!-- .page-block -->
+    
+    <div class="page-block --prepared-foods">
+      <div class="container">
+        <h2 class="page-block-heading --script">Be Prepared!</h2>
+        <p><em>In addition to all of our in-house offerings, we also stock an excellent selection of prepared foods and meals from the kitchen of South Carolina’s first James Beard Best Chef award winner, Louis Osteen. See our full menu for details!</em></p>
+        <a class="callout-link" href="menu.html#prepared-foods">Browse Prepared Foods</a>
+      </div><!-- .container -->
+    </div><!-- .page-block.--prepared-foods -->
+
+    <div class="page-block --google-map">
+      <em class="map-loading">loading map...</em>
+      <iframe class="google-map-iframe"
+        style="width: 100%; height: 50vh; min-height: 200px;"
+        width="450"
+        height="350"
+        frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAw9m0UdD7h_uuRaMo_5wLjURYaJWAI-ZI&q=435+e+main+st+suite+3+29302" allowfullscreen>
+      </iframe>
+    </div>
+  </section><!-- .site-page -->
     
 {{ partial "footer.html" . }}

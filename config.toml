@@ -15,11 +15,11 @@ sectionPagesMenu = "main"
     [[menu.main]]
     identifier = "menu"
     name = "Menu"
-    url = "/menu.html"
+    url = "/menu"
     weight = "2"
 
     [[menu.main]]
     identifier = "about"
     name = "About Us"
-    url = "/about.html"
+    url = "/about"
     weight = "3"

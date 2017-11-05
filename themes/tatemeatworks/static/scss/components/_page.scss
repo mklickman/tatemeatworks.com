@@ -1,0 +1,142 @@
+.site-header {
+    position: relative;
+    z-index: 100;
+}
+
+.site-page {
+    position: relative;
+    z-index: 50;
+}
+
+.site-footer {
+    position: relative;
+    z-index: 100;
+}
+
+.page-header {
+    background-size: cover;
+    padding: 18.75rem 10vw 8.125rem;
+    position: relative;
+
+    & > * {
+        position: relative;
+        z-index: 10;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(35, 31, 32, 0.75);
+        z-index: 5;
+    }
+}
+
+.page-title {
+    color: white;
+    font-size: 3.25rem;
+    font-family: "nexa rust sans";
+    letter-spacing: 2px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+
+    .highlight {
+        color: $red-primary;
+    }
+}
+
+.page-subtitle {
+    color: white;
+    font-family: "yesteryear";
+    font-size: 2.25rem;
+    line-height: 1.25em;
+    margin: 0;
+}
+
+.page-block {
+    padding: 5.5rem;
+
+    &.--google-map {
+        padding: 0;
+    }
+
+    p {
+        text-align: left;
+    }
+}
+
+.page-block-heading {
+    color: $red-primary;
+    font-family: "nexa rust sans";
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+
+    &.--script {
+        font-family: 'yesteryear';
+    }
+}
+
+.script-heading {
+    color: $red-primary;
+    display: flex;
+    align-items: center;
+    font-family: "yesteryear";
+    font-size: 3rem;
+
+    &:before,
+    &:after {
+        content: "";
+        background-color: $red-primary;
+        flex: 1 1 auto;
+        height: 1px;
+    }
+}
+
+.script-heading-text {
+    background: white;
+    padding: 0 2rem;
+}
+
+.page-block-intro {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto 4.5rem;
+    padding-bottom: 4.5rem;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 75%;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -37%;
+    }
+}
+
+p.small-text {
+    font-size: 1.125rem;
+}
+
+.callout-link {
+    background-image: url('../images/chevron-right-white.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto 100%;
+    color: white;
+    display: inline-block;
+    font-family: "nexa rust sans";
+    font-size: 1.5rem;
+    line-height: 1.65rem;
+    padding-right: 2.5rem;
+    text-decoration: none;
+    transition: padding 0.15s;
+
+    &:hover {
+        padding-right: 2.75rem;
+    }
+}

@@ -1,13 +1,22 @@
 @import
+    'abstract/colors',
     'abstract/normalize',
     'abstract/fonts';
 
 @import
-    'base/site',
-    'base/styles';
+    'base/base';
 
 @import
-    'components/my-component';
+    'components/site-header',
+    'components/main-nav',
+    'components/page',
+    'components/animal-grid',
+    'components/prepared-foods',
+    'components/google-map',
+    'components/order-online-block',
+    'components/site-footer';
 
 @import
-    'pages/index';
+    'pages/home',
+    'pages/about',
+    'pages/menu';

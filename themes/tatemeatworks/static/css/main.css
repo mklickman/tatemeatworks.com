@@ -540,3 +540,567 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+/* line 4, ../scss/base/_base.scss */
+body {
+  font-family: "goudy bookletter 1911";
+  font-weight: lighter;
+  text-align: center;
+}
+
+/* line 10, ../scss/base/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: lighter;
+  margin: 0;
+}
+
+/* line 15, ../scss/base/_base.scss */
+p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+/* line 20, ../scss/base/_base.scss */
+address {
+  display: inline-block;
+  font-style: normal;
+}
+
+/* line 25, ../scss/base/_base.scss */
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+/* line 29, ../scss/base/_base.scss */
+.container.--flex-container {
+  display: flex;
+}
+/* line 32, ../scss/base/_base.scss */
+.container.--flex-container > * {
+  flex: 1 1 auto;
+}
+
+/* line 40, ../scss/base/_base.scss */
+.flex-column.--main-column {
+  padding-right: 10%;
+}
+
+/* line 45, ../scss/base/_base.scss */
+.btn {
+  background: #c9362e;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-family: 'nexa rust sans';
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: .5rem 2rem;
+}
+
+/* line 57, ../scss/base/_base.scss */
+.btn-large {
+  border-radius: 7px;
+  font-size: 2.25rem;
+  padding: .5rem 4.5rem;
+}
+
+/* line 63, ../scss/base/_base.scss */
+.btn-script {
+  font-family: "yesteryear";
+}
+
+/* line 4, ../scss/components/_site-header.scss */
+.site-header {
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* line 9, ../scss/components/_site-header.scss */
+.logo-container {
+  box-sizing: border-box;
+  box-shadow: 0 0 0 5px white inset, 0 2px 20px rgba(0, 0, 0, 0.25);
+  background: #c9362e;
+  display: inline-block;
+  width: 300px;
+  padding: 15px 30px;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -150px;
+}
+/* line 24, ../scss/components/_site-header.scss */
+.logo-container img {
+  width: 100%;
+}
+
+/* line 1, ../scss/components/_main-nav.scss */
+.main-nav {
+  background: white;
+  padding: .85rem 0;
+}
+/* line 5, ../scss/components/_main-nav.scss */
+.main-nav .btn {
+  flex-basis: 25% !important;
+}
+
+/* line 10, ../scss/components/_main-nav.scss */
+.main-nav-link {
+  color: #c9362e;
+  display: inline-block;
+  font-family: "yesteryear";
+  font-size: 1.875rem;
+  font-weight: lighter;
+  flex-basis: 25% !important;
+  text-decoration: none;
+}
+/* line 19, ../scss/components/_main-nav.scss */
+.main-nav-link:nth-child(2n) {
+  margin-right: 150px;
+}
+/* line 23, ../scss/components/_main-nav.scss */
+.main-nav-link:nth-child(3n) {
+  margin-left: 150px;
+}
+/* line 27, ../scss/components/_main-nav.scss */
+.main-nav-link span {
+  position: relative;
+}
+/* line 32, ../scss/components/_main-nav.scss */
+.main-nav-link.--active span:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0.6rem;
+  left: -4px;
+  width: 105%;
+  height: 2px;
+  background: #c9362e;
+}
+
+/* line 1, ../scss/components/_page.scss */
+.site-header {
+  position: relative;
+  z-index: 100;
+}
+
+/* line 6, ../scss/components/_page.scss */
+.site-page {
+  position: relative;
+  z-index: 50;
+}
+
+/* line 11, ../scss/components/_page.scss */
+.site-footer {
+  position: relative;
+  z-index: 100;
+}
+
+/* line 16, ../scss/components/_page.scss */
+.page-header {
+  background-size: cover;
+  padding: 18.75rem 10vw 8.125rem;
+  position: relative;
+}
+/* line 21, ../scss/components/_page.scss */
+.page-header > * {
+  position: relative;
+  z-index: 10;
+}
+/* line 26, ../scss/components/_page.scss */
+.page-header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 31, 32, 0.75);
+  z-index: 5;
+}
+
+/* line 38, ../scss/components/_page.scss */
+.page-title {
+  color: white;
+  font-size: 3.25rem;
+  font-family: "nexa rust sans";
+  letter-spacing: 2px;
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+}
+/* line 45, ../scss/components/_page.scss */
+.page-title .highlight {
+  color: #c9362e;
+}
+
+/* line 50, ../scss/components/_page.scss */
+.page-subtitle {
+  color: white;
+  font-family: "yesteryear";
+  font-size: 2.25rem;
+  line-height: 1.25em;
+  margin: 0;
+}
+
+/* line 58, ../scss/components/_page.scss */
+.page-block {
+  padding: 5.5rem;
+}
+/* line 61, ../scss/components/_page.scss */
+.page-block.--google-map {
+  padding: 0;
+}
+/* line 65, ../scss/components/_page.scss */
+.page-block p {
+  text-align: left;
+}
+
+/* line 70, ../scss/components/_page.scss */
+.page-block-heading {
+  color: #c9362e;
+  font-family: "nexa rust sans";
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+}
+/* line 76, ../scss/components/_page.scss */
+.page-block-heading.--script {
+  font-family: 'yesteryear';
+}
+
+/* line 81, ../scss/components/_page.scss */
+.script-heading {
+  color: #c9362e;
+  display: flex;
+  align-items: center;
+  font-family: "yesteryear";
+  font-size: 3rem;
+}
+/* line 88, ../scss/components/_page.scss */
+.script-heading:before, .script-heading:after {
+  content: "";
+  background-color: #c9362e;
+  flex: 1 1 auto;
+  height: 1px;
+}
+
+/* line 97, ../scss/components/_page.scss */
+.script-heading-text {
+  background: white;
+  padding: 0 2rem;
+}
+
+/* line 102, ../scss/components/_page.scss */
+.page-block-intro {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto 4.5rem;
+  padding-bottom: 4.5rem;
+}
+/* line 108, ../scss/components/_page.scss */
+.page-block-intro:after {
+  content: "";
+  display: block;
+  width: 75%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -37%;
+}
+
+/* line 121, ../scss/components/_page.scss */
+p.small-text {
+  font-size: 1.125rem;
+}
+
+/* line 125, ../scss/components/_page.scss */
+.callout-link {
+  background-image: url("../images/chevron-right-white.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto 100%;
+  color: white;
+  display: inline-block;
+  font-family: "nexa rust sans";
+  font-size: 1.5rem;
+  line-height: 1.65rem;
+  padding-right: 2.5rem;
+  text-decoration: none;
+  transition: padding 0.15s;
+}
+/* line 139, ../scss/components/_page.scss */
+.callout-link:hover {
+  padding-right: 2.75rem;
+}
+
+/* line 1, ../scss/components/_animal-grid.scss */
+.animal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* line 9, ../scss/components/_animal-grid.scss */
+.animal {
+  background-repeat: no-repeat;
+  background-position: top center;
+  flex: 1 1 40%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
+/* line 16, ../scss/components/_animal-grid.scss */
+.animal.--crab {
+  background-size: 75%;
+}
+/* line 20, ../scss/components/_animal-grid.scss */
+.animal.--bacon, .animal.--crab {
+  padding-top: 1rem;
+}
+
+/* line 27, ../scss/components/_animal-grid.scss */
+.animal-title {
+  color: #c9362e;
+  font-family: "nexa rust slab";
+  font-size: 1.875rem;
+  margin: 3.5rem 0 5rem;
+}
+
+/* line 1, ../scss/components/_prepared-foods.scss */
+.page-block.--prepared-foods {
+  background-image: url("../images/shrimp-dish.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  text-align: left;
+}
+/* line 8, ../scss/components/_prepared-foods.scss */
+.page-block.--prepared-foods:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/* line 19, ../scss/components/_prepared-foods.scss */
+.page-block.--prepared-foods .container {
+  max-width: 860px;
+  position: relative;
+  z-index: 10;
+}
+/* line 25, ../scss/components/_prepared-foods.scss */
+.page-block.--prepared-foods .page-block-heading {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 1.25rem;
+}
+/* line 31, ../scss/components/_prepared-foods.scss */
+.page-block.--prepared-foods p {
+  color: white;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+/* line 1, ../scss/components/_google-map.scss */
+.page-block.--google-map {
+  background: #e5e3df;
+  position: relative;
+}
+
+/* line 6, ../scss/components/_google-map.scss */
+.map-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  color: #888;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+/* line 21, ../scss/components/_google-map.scss */
+.google-map-iframe {
+  background: transparent;
+  width: 100%;
+  height: 75vh;
+  min-height: 200px;
+  margin-bottom: -4px;
+  position: relative;
+  z-index: 10;
+}
+
+/* line 1, ../scss/components/_order-online-block.scss */
+.order-online-block {
+  background-image: url("../images/brown-paper-portrait.jpg");
+  background-size: cover;
+  box-sizing: border-box;
+  min-width: 315px;
+  padding: 2.25rem;
+}
+/* line 8, ../scss/components/_order-online-block.scss */
+.order-online-block .btn {
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+/* line 14, ../scss/components/_order-online-block.scss */
+.order-online-header {
+  color: #492e17;
+  font-family: "nexa rust slab";
+  font-size: 2.25rem;
+}
+/* line 19, ../scss/components/_order-online-block.scss */
+.order-online-header .and {
+  font-family: "yesteryear";
+  font-size: 3rem;
+}
+/* line 24, ../scss/components/_order-online-block.scss */
+.order-online-header .dash {
+  color: #c9362e;
+  font-family: sans-serif;
+}
+
+/* line 30, ../scss/components/_order-online-block.scss */
+p.order-online-text {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+}
+
+/* line 1, ../scss/components/_site-footer.scss */
+.site-footer {
+  background: #c9362e;
+  color: white;
+  padding: 2.5rem 0 4rem;
+}
+/* line 6, ../scss/components/_site-footer.scss */
+.site-footer .flex-column {
+  flex-basis: 33% !important;
+}
+/* line 14, ../scss/components/_site-footer.scss */
+.site-footer a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+/* line 19, ../scss/components/_site-footer.scss */
+.site-footer a:hover address {
+  text-decoration: underline;
+}
+
+/* line 25, ../scss/components/_site-footer.scss */
+.footer-section {
+  font-size: 1.25rem;
+  text-align: left;
+  margin-bottom: 2.75rem;
+}
+/* line 30, ../scss/components/_site-footer.scss */
+.footer-section:last-child {
+  margin-bottom: 0;
+}
+
+/* line 35, ../scss/components/_site-footer.scss */
+.footer-section-heading {
+  font-size: 1.25rem;
+  font-family: 'nexa rust sans';
+}
+
+/* line 40, ../scss/components/_site-footer.scss */
+.hours-row {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+/* line 46, ../scss/components/_site-footer.scss */
+.hours-label {
+  display: inline-block;
+  width: 11rem;
+}
+
+/* line 51, ../scss/components/_site-footer.scss */
+.footer-logo {
+  background: #c9362e;
+  box-sizing: border-box;
+  border-radius: 100%;
+  display: inline-block;
+  overflow: hidden;
+  padding: 50px 70px 35px;
+  position: relative;
+  margin-top: -6rem;
+  width: 350px;
+}
+/* line 62, ../scss/components/_site-footer.scss */
+.footer-logo img {
+  width: 100%;
+}
+
+/* line 67, ../scss/components/_site-footer.scss */
+.footer-contact-info {
+  color: white;
+  font-family: 'nexa rust sans';
+  font-size: 1.125rem;
+  text-decoration: none;
+}
+
+/* line 74, ../scss/components/_site-footer.scss */
+.social-links-heading {
+  font-family: 'nexa rust sans';
+  font-size: 1.25rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+}
+/* line 83, ../scss/components/_site-footer.scss */
+.social-links-heading .or {
+  color: #ffa8a8;
+  font-family: "yesteryear";
+  font-size: 2.25rem;
+  line-height: .75;
+}
+
+/* line 91, ../scss/components/_site-footer.scss */
+.social-links a {
+  margin-right: 1.5rem;
+}
+/* line 94, ../scss/components/_site-footer.scss */
+.social-links a:last-child {
+  margin-right: 0;
+}
+
+/* line 99, ../scss/components/_site-footer.scss */
+.copyright-text {
+  color: #c9362e;
+  font-size: 1rem;
+  margin: .6rem 0;
+}
+
+/* line 6, ../scss/pages/_home.scss */
+.page-home .page-header {
+  background-image: url("../images/marbled-beef-1800w.jpg");
+}
+/* line 10, ../scss/pages/_home.scss */
+.page-home .page-title {
+  margin-bottom: 6.25rem;
+}
+
+/* line 6, ../scss/pages/_about.scss */
+.page-about .page-header {
+  background-image: url("../images/cattle-grazing-1800w.jpg");
+  padding-top: 15rem;
+}
+/* line 11, ../scss/pages/_about.scss */
+.page-about .page-title {
+  margin-bottom: 0;
+}
