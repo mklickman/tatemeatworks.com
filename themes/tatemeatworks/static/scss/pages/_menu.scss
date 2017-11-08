@@ -1,0 +1,39 @@
+.page-menu {
+    
+    .page-header {
+        background-image: url('../images/brown-paper-dark-1440w.jpg');
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .page-title {
+        text-shadow: 0 3px 15px rgba(0, 0, 0, 0.25); 
+    }
+
+    .page-block {
+        padding-bottom: 0;
+    }
+
+    .--sidebar {
+        max-width: 350px;
+    }
+    
+    .--main-column {
+        margin-left: 6rem;
+        margin-bottom: 4rem;
+        padding-right: 0 !important;
+    }
+}
+
+.page-menu-thanks {
+
+    .page-header {
+        background-image: url('../images/brown-paper-dark-1440w.jpg');
+
+        &:before {
+            display: none;
+        }
+    }
+}

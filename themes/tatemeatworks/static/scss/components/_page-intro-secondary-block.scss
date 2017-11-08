@@ -1,0 +1,42 @@
+.page-intro-secondary-block {
+    align-items: center;
+
+    .--flex-container & {
+        flex: 1 1 25%;
+    }
+
+    &.--left {
+        border-right: 2px solid #ddd;
+        padding-right: 2rem;
+        text-align: right;
+    }
+
+    &.--right {
+        padding-left: 2rem;
+        text-align: left;
+    }
+}
+
+.page-intro-secondary-heading {
+    color: #363636;
+    font-family: 'nexa rust sans';
+    font-size: 1.5rem;
+}
+
+.page-intro-secondary-text {
+    line-height: 1;
+    text-align: inherit !important;
+}
+
+.page-intro-secondary-cta {
+    color: $red-primary;
+    display: block;
+    font-family: 'Goudy Bookletter 1911';
+    font-size: 1.75rem;
+    margin-bottom: .5rem;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

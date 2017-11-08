@@ -1,0 +1,224 @@
+.order-form {
+  text-align: left;
+
+  .fieldset-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid $red-primary;
+    padding-bottom: 0.25rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .legend-heading {
+    flex: 1 1 50%;
+    color: $red-primary;
+    font-family: 'nexa rust slab';
+    font-size: 2.5rem;
+    line-height: 1;
+  }
+
+  .legend-subheading {
+    flex: 1 1 50%;
+    color: $red-primary;
+    font-family: "yesteryear";
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 4rem;
+  }
+
+  .form-group-collection {
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.order-form-subheading {
+  font-family: "yesteryear";
+  font-size: 2.15rem;
+  font-weight: lighter;
+  margin-bottom: 0.5rem;
+}
+
+.form-group.--item {
+  box-sizing: border-box;
+  background-color: #e9e9e9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem;
+  padding-top: 1rem;
+  margin-bottom: .35rem;
+  width: 100%;
+
+  [type="checkbox"] {
+    cursor: pointer;
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #f00;
+    top: 6px;
+    margin-right: 1rem;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+      background: #fff;
+      box-shadow: 1px 1px 0 #ccc inset;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #e9e9e9;
+      background-image: url('../images/x-red.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0;
+    }
+
+    &:checked:after {
+      opacity: 0;
+    }
+
+    &:checked:before {
+      opacity: 1;
+    }
+  }
+
+  &:first-child {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 4px 4px;
+    margin-bottom: 0;
+  }
+}
+
+.label-text {
+  color: #323232;
+  font-size: 1.5rem;
+}
+
+.form-group-detail {
+  color: #575757;
+  font-style: italic;
+  padding-left: 1.5rem;
+}
+
+.form-group-drawer {
+  background: #dcdcdc;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex: 1 0 auto;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &.--visible {
+    height: auto;
+    padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    top: 1.25rem;
+    left: -1.2rem;
+    width: calc(100% + 2.4rem);
+  }
+
+  label {
+    color: #696969;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+  }
+}
+
+input[type="text"],
+.text-field {
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 1px 1px 0 #ccc inset;
+  font-family: 'goudy bookletter 1911';
+  padding: .7rem 1rem .5rem;
+  flex: 1;
+  width: 100%;
+
+  &::placeholder-shown {
+    font-style: italic;
+  }
+}
+
+.customer-info {
+  background-image: url('../images/dashed-divider.svg');
+  background-repeat: repeat-x;
+  background-position: top left;
+  margin-top: 4rem;
+  padding-top: 4rem !important;
+}
+
+.customer-info-heading {
+  color: $red-primary;
+  font-family: 'nexa rust sans';
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.customer-info-fields {
+  background-color: #e9e9e9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 1.75rem 2.5rem;
+  position: relative;
+
+  &:after {
+    @include clearfix();
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+
+  label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   top: -50px;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 5px;
+  //   background-image: url('../images/dashed-divider.svg');
+  //   background-repeat: repeat-x;
+  //   background-position: top left;
+  // }
+
+  [type="submit"] {
+    float: right;
+    margin-top: 1rem;
+  }
+}

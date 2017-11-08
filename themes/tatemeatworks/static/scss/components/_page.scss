@@ -18,6 +18,14 @@
     padding: 18.75rem 10vw 8.125rem;
     position: relative;
 
+    &.--compact {
+        padding-top: 15rem;
+
+        .page-title {
+            margin-bottom: 0;
+        }
+    }
+
     & > * {
         position: relative;
         z-index: 10;
@@ -53,6 +61,21 @@
     font-size: 2.25rem;
     line-height: 1.25em;
     margin: 0;
+}
+
+.page-intro {
+    border-bottom: 1px solid $red-primary;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    text-align: center;
+
+    p {
+        text-align: inherit !important;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }
 
 .page-block {

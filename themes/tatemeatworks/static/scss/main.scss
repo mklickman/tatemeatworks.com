@@ -1,7 +1,8 @@
 @import
     'abstract/colors',
     'abstract/normalize',
-    'abstract/fonts';
+    'abstract/fonts',
+    'abstract/mixins';
 
 @import
     'base/base';
@@ -10,10 +11,13 @@
     'components/site-header',
     'components/main-nav',
     'components/page',
+    'components/sidebar-nav',
+    'components/page-intro-secondary-block',
     'components/animal-grid',
     'components/prepared-foods',
     'components/google-map',
     'components/order-online-block',
+    'components/order-form',
     'components/site-footer';
 
 @import
