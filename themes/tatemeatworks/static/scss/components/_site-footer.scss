@@ -6,9 +6,11 @@
     .flex-column {
         flex-basis: 33% !important;
 
-        // &:nth-child(2n) {
-        //     text-align: center;
-        // }
+        &:nth-child(2n) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     a {
@@ -100,4 +102,87 @@
     color: $red-primary;
     font-size: 1rem;
     margin: .6rem 0;
+
+    br {
+        display: none;
+
+        @media screen and (max-width: 425px) {
+            display: block;
+        }
+    }
+}
+
+.site-footer {
+
+    @media screen and (max-width: 930px) {
+        padding-top: 0;
+
+        .flex-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flex-column:nth-child(1) {
+            width: 100%;
+            display: flex;
+            justify-content: stretch;
+            padding-top: 3rem;
+
+            .footer-section {
+                flex-basis: 50%;
+                padding: 0.5rem 0;
+            
+                &:nth-child(1) {
+                    text-align: right;
+                    padding-right: 2rem;
+                    border-right: 1px solid rgba(255, 255, 255, 0.5);
+                    margin-bottom: 0;
+                }
+
+                &:nth-child(2) {
+                    padding-left: 2rem;
+                }
+            }
+
+            @media screen and (max-width: 700px) {
+                flex-direction: column;
+
+                .footer-section {
+                    padding: 0 !important;
+                    text-align: center !important;
+                    border: none;
+                    
+                    &:nth-child(1) {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                .hours-row {
+                    margin-right: 1rem;
+
+                    &:nth-child(3) .hours-label {
+                        margin-left: 4rem;
+                    }
+
+                    &:nth-child(4) .hours-label {
+                        margin-left: 2rem;
+                    }
+                }
+
+                .hours-label {
+                    width: auto;
+                    margin-right: 1rem;
+                }
+            }
+        }
+
+        .flex-column:nth-child(2) {
+            order: -1;
+        }
+
+
+        .footer-logo {
+            margin-top: 0;
+        }
+    }
 }

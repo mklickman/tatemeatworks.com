@@ -1,9 +1,19 @@
 (function(window, $) {
     $(document).ready(function() {
 
+        $('body').on('click', function(event) {
+            console.log(event);
+        })
+        //  Mobile nav visibility
+        // ------------------------------------------------------------------------//
+        $('.mobile-nav-trigger').on('click', function() {
+            console.log("mobile nav trigger clicked");
+            $('.site-header').toggleClass('nav-expanded');
+        });
 
 
-        // Update the copyright year in the footer to be current
+        //  Update the copyright year in the footer to be current
+        // ------------------------------------------------------------------------//
         var curYear = new Date().getFullYear();
         $('.copyright-year').text(curYear);
 
