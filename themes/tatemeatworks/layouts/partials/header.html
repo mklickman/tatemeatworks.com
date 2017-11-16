@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 
 {{ if isset .Params "htmlclass" }}
   <html{{ with .Params.htmlclass }} class="{{ . }}"{{ end }}>
@@ -28,20 +29,30 @@
 </head>
 
 <body>
-  <header class="site-header">
+  <div class="upgrade-notice">
+    <div class="container">
+      <a class="close-btn">&times;</a>
+      <h1 class="page-block-heading">Houston, We Have a Problem...</h1>
+      <p>It looks like your browser is <em>very</em> out of date. Feel free to continue browsing our site, but since TateMeatworks.com was built using some of the latest and greatest web technology, please be aware that it will not work as intended. For the true Tate Meatworks experience, please upgrade your browser.</p>
+      <h2 class="script-heading"><span class="script-heading-text">How To Upgrade Your Browser</span></h2>
+      <p>Don't worry, it only takes a minute. Just go to this link, follow the instructions, and come back once you're done</p>
+      <a href="https://browser-update.org/update.html" target="_blank" class="btn">Upgrade</a>
+    </div>
+  </div>
+  <header class="site-header" role="banner">
     <div class="logo-container">
       <img src="/images/tate-meatworks-logo.svg" alt="Tate Meatworks Butcher Shop | Aged & Heritage Breed Offerings">
     </div><!-- .logo-container -->
 
     {{ $currentNode := . }}
     <nav class="main-nav">
-      <div class="container --flex-container">
+      <div class="container flex-container">
         {{ range .Site.Menus.main }}
             {{ if $currentNode.IsHome }}
                 <a href="{{ .URL }}" class="main-nav-link"><span>{{ .Name }}</span></a>
             {{ else }}
               {{ if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}
-                <a href="{{ .URL }}" class="main-nav-link --active"><span>{{ .Name }}</span></a>
+                <a href="{{ .URL }}" class="main-nav-link active"><span>{{ .Name }}</span></a>
               {{ else }}
                 <a href="{{ .URL }}" class="main-nav-link"><span>{{ .Name }}</span></a>
               {{ end }}

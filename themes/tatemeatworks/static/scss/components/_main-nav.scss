@@ -28,7 +28,7 @@
         position: relative;
     }
 
-    &.--active {
+    &.active {
         span:before {
             content: "";
             display: block;

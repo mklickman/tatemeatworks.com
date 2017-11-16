@@ -1,0 +1,45 @@
+.upgrade-notice {
+    display: none;
+}
+
+[data-useragent*="MSIE 9.0"] {
+
+    .upgrade-notice {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        text-align: center;
+        z-index: 999999;
+
+        .container {
+            background: white;
+            border-radius: 4px;
+            box-sizing: border-box;
+            padding: 3rem;
+            width: 850px;
+            margin-top: 75px;
+            display: inline-block;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 23px;
+            background: $red-primary;
+            color: white;
+            cursor: pointer;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            top: -7px;
+            right: -7px;
+        }
+    }
+}

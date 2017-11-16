@@ -8,12 +8,20 @@
         $('.copyright-year').text(curYear);
 
 
+        //  IE 9 Upgrade notice close behavior
+        // ------------------------------------------------------------------------//
+        $('.upgrade-notice .close-btn').on('click', function() {
+            $(this).parents('.upgrade-notice').remove();
+        });
+
+
         //  Order page sticky sidebar
         // ------------------------------------------------------------------------//
         
         $('.sidebar-nav').sticky({
             topSpacing: 10,
-            bottomSpacing: 450
+            // bottomSpacing: 450
+            bottomSpacing: $('.site-footer').outerHeight() + $('.copyright').outerHeight() + 20
         });
 
        
@@ -22,8 +30,8 @@
         // ------------------------------------------------------------------------//
 
         // Show/hide item drawer
-        $('.form-group.--item input[type="checkbox"]').on('change', function() {
-            $(this).parents('.form-group').find('.form-group-drawer').toggleClass('--visible');
+        $('.form-group.item input[type="checkbox"]').on('change', function() {
+            $(this).parents('.form-group').find('.form-group-drawer').toggleClass('visible');
         });
 
         // Remove empty product lines from the form before submitting
@@ -39,7 +47,7 @@
             $('.item-amount').each(function(i, e) {
                 var $this = $(this);
 
-                if(!$this.parents('.form-group-drawer').hasClass('--visible')) {
+                if(!$this.parents('.form-group-drawer').hasClass('visible')) {
                     $this.remove();
                 }
             });

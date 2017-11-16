@@ -11,6 +11,7 @@ body {
     font-family: "goudy bookletter 1911";
     font-weight: lighter;
     text-align: center;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,12 +29,17 @@ address {
     font-style: normal;
 }
 
+.upgrade-notice {
+    display: none;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1280px;
 
-    &.--flex-container {
+    &.flex-container {
         display: flex;
+        width: 100%;
 
         & > * {
             flex: 1 1 auto;
@@ -43,14 +49,21 @@ address {
 
 .flex-column {
 
-    &.--main-column {
+    &.main-column {
         padding-right: 10%;
+    }
+}
+
+@supports (display: flex) {
+    .flex-column {
+        display: block;
     }
 }
 
 .btn {
     background: $red-primary;
     box-sizing: border-box;
+    border: none;
     border-radius: 5px;
     color: white;
     display: inline-block;

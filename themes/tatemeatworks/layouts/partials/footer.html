@@ -1,5 +1,5 @@
-  <footer class="site-footer">
-    <div class="container --flex-container">
+  <footer class="site-footer" role="contentinfo">
+    <div class="container flex-container">
       
       <div class="flex-column">
 
@@ -28,15 +28,15 @@
         </div><!-- .footer-section -->
 
       </div><!-- .flex-column -->
-      
+
       <div class="flex-column">
         <div class="footer-logo">
           <img src="/images/tate-meatworks-logo.svg" alt="">
         </div><!-- .footer-logo -->
         <a href="mailto:info@tatemeatworks.com" class="footer-contact-info">info@tatemeatworks.com</a>
-        <a href="tel:18645551234" class="footer-contact-info">864.555.1234</a>
+        <a href="tel:18645415121" class="footer-contact-info">864.541.5121</a>
       </div><!-- .flex-column -->
-      
+
       <div class="flex-column">
         <h4 class="social-links-heading">
           Leave a Review<br>
@@ -51,7 +51,7 @@
       </div><!-- .flex-column -->
     </div><!-- .container -->
   </footer>
-  <footer class="copyright">
+  <footer class="copyright" role="contentinfo">
     <p class="copyright-text">Copyright &copy; <span class="copyright-year">2017</span> Tate Meatworks, Inc. All rights reserved.</p>
   </footer>
 
@@ -74,5 +74,9 @@
   <script src="/js/jquery.3.2.1.slim.min.js"></script>
   <script src="/js/jquery.sticky.js"></script>
   <script src="/js/site.js"></script>
+  <script>
+      var doc = document.documentElement;
+      doc.setAttribute('data-useragent', navigator.userAgent);
+  </script>
 </body>
 </html>
