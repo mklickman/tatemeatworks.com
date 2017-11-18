@@ -1,6 +1,15 @@
 // For more information on how to use base css partials, see the "7-1 pattern" documentation:
 // https://sass-guidelin.es/#the-7-1-pattern
 
+
+[data-useragent*="MSIE 9"] {
+
+    body {
+        min-width: 1280px;
+    }
+}
+
+
 @mixin clearfix {
     content: "";
     display: table;

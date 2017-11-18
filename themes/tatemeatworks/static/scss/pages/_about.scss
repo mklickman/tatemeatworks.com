@@ -6,4 +6,18 @@
     .page-header {
         background-image: url('../images/cattle-grazing-1800w.jpg');
     }
+
+    @media screen and (max-width: 780px) {
+        
+        .page-block {
+            .flex-container {
+                flex-direction: column;
+            }
+
+            .main-column {
+                padding-right: 0;
+                margin-bottom: 3rem;
+            }
+        }
+    }
 }

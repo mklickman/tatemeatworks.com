@@ -146,6 +146,7 @@
 
             @media screen and (max-width: 700px) {
                 flex-direction: column;
+                min-height: 250px;
 
                 .footer-section {
                     padding: 0 !important;
@@ -154,6 +155,11 @@
                     
                     &:nth-child(1) {
                         margin-bottom: 2rem;
+                        min-height: 100px;
+                    }
+
+                    &:nth-child(2) {
+                        min-height: 120px;
                     }
                 }
 
@@ -178,6 +184,13 @@
 
         .flex-column:nth-child(2) {
             order: -1;
+            min-height: 340px;
+        }
+
+        @media screen and (max-width: 700px) {
+            .flex-column:nth-child(3) {
+                min-height: 225px;
+            }
         }
 
 

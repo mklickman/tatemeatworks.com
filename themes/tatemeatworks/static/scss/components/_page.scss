@@ -25,6 +25,14 @@
         .page-title {
             margin-bottom: 0;
         }
+
+        @media screen and (max-width: 860px) {
+            padding-top: 10rem;
+        }
+
+        @media screen and (max-width: 680px) {
+            padding-top: 5rem;
+        }
     }
 
     & > * {
@@ -70,6 +78,10 @@
     font-size: 2.25rem;
     line-height: 1.25em;
     margin: 0;
+
+    @media screen and (max-width: 860px) {
+        font-size: 1.5rem;
+    }
 }
 
 .page-intro {
