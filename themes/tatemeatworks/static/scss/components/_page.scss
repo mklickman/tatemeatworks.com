@@ -15,6 +15,7 @@
 
 .page-header {
     background-size: cover;
+    background-position: center;
     padding: 18.75rem 10vw 8.125rem;
     position: relative;
 
@@ -41,6 +42,10 @@
         background-color: rgba(35, 31, 32, 0.75);
         z-index: 5;
     }
+
+    @media screen and (max-width: 680px) {
+        padding: 4rem 2rem;
+    }
 }
 
 .page-title {
@@ -52,6 +57,10 @@
 
     .highlight {
         color: $red-primary;
+    }
+
+    @media screen and (max-width: 680px) {
+        font-size: 1.5rem;
     }
 }
 
@@ -88,6 +97,18 @@
     p {
         text-align: left;
     }
+
+    @media screen and (max-width: 860px) {
+        padding: 3.5rem;
+    }
+
+    @media screen and (max-width: 680px) {
+        padding: 2.5rem;
+
+        p {
+            text-align: center;
+        }
+    }
 }
 
 .page-block-heading {
@@ -98,6 +119,11 @@
 
     &.script {
         font-family: 'yesteryear';
+    }
+
+    @media screen and (max-width: 680px) {
+        margin-bottom: 1.75rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -138,6 +164,11 @@
         bottom: 0;
         left: 50%;
         margin-left: -37%;
+    }
+
+    @media screen and (max-width: 680px) {
+        margin: 0 auto 4rem;
+        padding-bottom: 3rem;
     }
 }
 

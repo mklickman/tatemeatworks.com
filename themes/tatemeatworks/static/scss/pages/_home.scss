@@ -6,9 +6,40 @@
 
     .page-header {
         background-image: url('../images/marbled-beef-1800w.jpg');
+
+        .btn-large {
+            font-size: 1.75rem;
+        }
+
+        @media screen and (min-width: 681px) and (max-width: 860px) {
+            padding-top: 10rem;
+        }
     }
 
     .page-title {
         margin-bottom: 6.25rem;
+
+        @media screen and (max-width: 1010px) {
+            font-size: 2rem;
+        }
+        
+        @media screen and (max-width: 680px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    br.show-small {
+        display: none;
+    }
+
+    @media screen and (max-width: 680px) {
+
+        br.show-small {
+            display: block;
+        }
+
+        br.show-large {
+            display: none;
+        }
     }
 }

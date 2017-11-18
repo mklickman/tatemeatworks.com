@@ -1,13 +1,10 @@
 (function(window, $) {
     $(document).ready(function() {
 
-        $('body').on('click', function(event) {
-            console.log(event);
-        })
         //  Mobile nav visibility
         // ------------------------------------------------------------------------//
-        $('.mobile-nav-trigger').on('click', function() {
-            console.log("mobile nav trigger clicked");
+        $('.mobile-nav-trigger').on('click', function(event) {
+            event.preventDefault();
             $('.site-header').toggleClass('nav-expanded');
         });
 

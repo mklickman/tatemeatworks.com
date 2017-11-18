@@ -143,15 +143,17 @@
     height: 100%;
     width: 100px;
     transition: transform .3s;
-    transform: rotate 0;
+    transform: rotate(0);
     outline: none;
     width: 95px;
     box-sizing: border-box;
     padding: 2rem;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
     img {
-        pointer-events: none;
+        -webkit-tap-highlight-color: transparent;
+        width: 100%;
     }
 
     .mobile-nav-close {

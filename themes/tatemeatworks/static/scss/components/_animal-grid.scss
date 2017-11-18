@@ -9,6 +9,7 @@
 .animal {
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: contain;
     flex: 1 1 40%;
     max-width: 400px;
     margin-bottom: 2rem;
@@ -26,6 +27,22 @@
     p {
         text-align: center;
     }
+
+    @media screen and (max-width: 700px) {
+        max-width: none;
+    }
+
+    @media screen and (min-width: 701px) and (max-width: 1065px) {
+        &:nth-child(2n) {
+            margin-left: 6rem;
+        }
+    }
+    
+    @media screen and (min-width: 701px) and (max-width: 768px) {
+        &:nth-child(2n) {
+            margin-left: 3rem;
+        }
+    }
 }
 
 .animal-title {
@@ -33,4 +50,36 @@
     font-family: "nexa rust slab";
     font-size: 1.875rem;
     margin: 3.5rem 0 5rem;
+}
+
+@media screen and (max-width: 700px) {
+    
+    .animal {
+        flex-basis: 100%;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    .animal-title {
+        font-size: 1.5rem;
+        margin: 2rem 0 4rem;
+    }
+
+    .animal {
+
+        &.--chicken .animal-title {
+            margin-top: 5rem;
+            margin-bottom: 0rem !important;
+        }
+
+        &.--lamb .animal-title {
+            margin: 4rem 0 2rem;
+        }
+
+        &.--seafood .animal-title {
+            margin: 3rem 0 2rem;
+        }
+    }
 }
