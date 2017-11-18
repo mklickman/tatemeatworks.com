@@ -9,6 +9,19 @@
     padding-bottom: 0.25rem;
     margin-bottom: 2rem;
     width: 100%;
+
+    @media screen and (max-width: 620px) {
+      flex-direction: column;
+      align-items: center;
+
+      .legend-heading {
+        min-height: 25px;
+      }
+
+      .legend-subheading {
+        min-height: 25px
+      }
+    }
   }
 
   .legend-heading {
@@ -17,6 +30,15 @@
     font-family: 'nexa rust slab';
     font-size: 2.5rem;
     line-height: 1;
+
+    @media screen and (max-width: 575px) {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 425px) {
+      font-size: 1.4rem;
+    }
   }
 
   .legend-subheading {
@@ -25,6 +47,11 @@
     font-family: "yesteryear";
     font-size: 1.5rem;
     text-align: right;
+
+    @media screen and (max-width: 450px) {
+      font-size: 1.15rem;
+      text-align: center;
+    }
   }
 
   fieldset {
@@ -61,12 +88,17 @@
   margin-bottom: .35rem;
   width: 100%;
 
+  @media screen and (max-width: 450px) {
+    padding: 1rem;
+    padding-top: 0.5rem;
+  }
+
   [type="checkbox"] {
     cursor: pointer;
     position: relative;
     width: 2rem;
     height: 2rem;
-    border: 1px solid #f00;
+    // border: 1px solid #f00;
     top: 6px;
     margin-right: 1rem;
 
@@ -123,7 +155,11 @@
 .form-group-detail {
   color: #575757;
   font-style: italic;
-  padding-left: 1.5rem;
+  margin-top: 1rem;
+
+  @media screen and (max-width: 450px) {
+    margin-top: 0.5rem;
+  }
 }
 
 .form-group-drawer {
@@ -137,12 +173,28 @@
   position: relative;
   width: 100%;
 
+  @media screen and (max-width: 650px) {
+    display: block;
+    padding-left: 1.5rem !important;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  }
+
   &.visible {
     height: auto;
     padding: 1.5rem 1.5rem 1.5rem 4.5rem;
     top: 1.25rem;
     left: -1.2rem;
     width: calc(100% + 2.4rem);
+  }
+  
+  @media screen and (max-width: 450px) {
+    width: calc(100% + 1.9rem) !important;
+    left: -15px !important;
+    top: 1rem !important;
   }
 
   label {

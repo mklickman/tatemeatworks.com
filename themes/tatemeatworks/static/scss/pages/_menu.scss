@@ -14,9 +14,34 @@
 
     .page-block {
         padding-bottom: 0;
+
+        @media screen and (max-width: 1160px) {
+            .main-column {
+                margin-left: 3rem;
+            }
+        }
+
+        @media screen and (max-width: 945px) {
+            
+            &.order-form-block .flex-container {
+                flex-direction: column;
+            }
+
+            .sidebar,
+            .main-column {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .sidebar {
+                max-width: none;
+                margin-bottom: 3rem;
+            }
+        }
     }
 
     .sidebar {
+        min-width: 275px;
         max-width: 350px;
     }
     
@@ -24,6 +49,28 @@
         margin-left: 6rem;
         margin-bottom: 4rem;
         padding-right: 0 !important;
+    }
+
+    @media screen and (max-width: 845px) {
+        
+        .page-intro-secondary-info .flex-container {
+            flex-direction: column;
+        }
+
+        .page-intro-secondary-block {
+            text-align: center;
+            margin-right: 0;
+            padding-right: 0;
+            padding-left: 0;
+            border-right: none;
+            min-height: 200px;
+
+            &.left {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid #ddd;
+            }
+        }
     }
 }
 

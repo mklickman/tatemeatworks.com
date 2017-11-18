@@ -1,0 +1,50 @@
+.mobile-page-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    background: white;
+    border: 1px solid #bbb;
+    border-top: none;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border-radius: 0 0 5px 5px;
+    z-index: 99999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translate3d(0, -65px, 0);
+    transition: transform 0.25s;
+
+    @media screen and (max-width: 945px) {
+        display: block;
+    }
+
+    &.visible {
+        transform: translate3d(0, 0, 0);
+    }
+
+    select {
+        border: none;
+        background: transparent;
+        width: 100%;
+        padding: 15px 0;
+        outline: none;
+        cursor: pointer;
+        font-family: "nexa rust sans";
+        font-size: 1.1em;
+        color: #555;
+
+        option {
+            color: #888;
+
+            span {
+                font-family: sans-serif;
+                font-weight: bold;
+            }
+        }
+
+        option:last-child {
+            color: $red-primary;
+        }
+    }
+}

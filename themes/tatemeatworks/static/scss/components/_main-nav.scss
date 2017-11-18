@@ -41,6 +41,7 @@
         }
 
         @media screen and (max-width: 580px) {
+            border-bottom: 1px solid $red-primary;
             border-radius: 0;
             font-size: 1.25rem;
             padding: 1rem;
@@ -127,6 +128,10 @@
 
     @media screen and (max-width: 860px) {
         color: white;
+
+        span:before {
+            background-color: white;
+        }
 
         &:nth-child(2) {
             margin-right: 0;

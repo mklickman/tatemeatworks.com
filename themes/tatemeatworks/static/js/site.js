@@ -25,10 +25,55 @@
         //  Order page sticky sidebar
         // ------------------------------------------------------------------------//
         
-        $('.sidebar-nav').sticky({
-            topSpacing: 10,
-            // bottomSpacing: 450
-            bottomSpacing: $('.site-footer').outerHeight() + $('.copyright').outerHeight() + 20
+
+        // Only stick the sidebar to the window when the viewport is wider than 945px...
+        var checkSticky = function() {
+            if ($(window).width() > 945) {
+                $('.sidebar-nav').sticky({
+                    topSpacing: 10,
+                    responsiveWidth: true,
+                    bottomSpacing: $('.site-footer').outerHeight() + $('.copyright').outerHeight() + 20
+                });
+
+            // ...otherwise, take the sidebar nav out of the sticky wrapper, and put it
+            // back in the DOM like normal, and remove the sticky wrapper.
+            } else if ($('.sticky-wrapper').length) {
+                var $parent = $('.sticky-wrapper').parent();
+                var innerHTML = $('.sticky-wrapper').html();
+
+                $parent.prepend(innerHTML);
+                $('.sidebar-nav').removeAttr('style');
+                $('.sticky-wrapper').remove();
+            }
+        }
+
+        checkSticky();
+        $(window).on('resize', checkSticky);
+        
+        
+
+        //  Order Form "Jump to a Section" for mobile viewports
+        // ------------------------------------------------------------------------//
+
+        // jump to section on select
+        $('.js-menu-section-select').on('change', function() {
+            var val = $(this).val();
+
+            if (val !== '') {
+                window.location.hash = $(this).val();
+            }
+        });
+
+        // show the menu after inline menu scrolls out of view
+        $(window).on('scroll', function() {
+            var $sidebarNav = $('.sidebar-nav');
+            var menuBottom = $sidebarNav.offset().top + $sidebarNav.outerHeight();
+            
+            if ($(window).scrollTop() > menuBottom) {
+                $('.mobile-page-nav').not('.visible').addClass('visible');
+            } else {
+                $('.mobile-page-nav.visible').removeClass('visible');
+            }
         });
 
        

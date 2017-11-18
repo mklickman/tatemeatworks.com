@@ -19,7 +19,7 @@
     padding: 18.75rem 10vw 8.125rem;
     position: relative;
 
-    &.--compact {
+    &.compact {
         padding-top: 15rem;
 
         .page-title {
@@ -152,6 +152,10 @@
         background-color: $red-primary;
         flex: 1 1 auto;
         height: 1px;
+    }
+
+    @media screen and (max-width: 680px) {
+        font-size: 2rem;
     }
 }
 
