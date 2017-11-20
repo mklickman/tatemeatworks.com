@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{{ if (gt (findRE "404" .Title) 0) }}
+  <html class="page-404">
+{{ end }}
+
 {{ if isset .Params "htmlclass" }}
   <html{{ with .Params.htmlclass }} class="{{ . }}"{{ end }}>
 {{ else }}
@@ -58,7 +62,7 @@
               {{ end }}
             {{ end }}
         {{ end }}
-        <a href="/menu" class="btn">Order Online</a>
+        <a href="/menu.html" class="btn">Order Online</a>
       </div><!-- .container -->
     </nav><!-- .main-nav -->
     <a class="mobile-nav-trigger">
