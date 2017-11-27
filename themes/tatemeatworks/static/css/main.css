@@ -1155,6 +1155,9 @@ p.small-text {
   .order-online-block .btn {
     font-size: 1.1rem;
     padding: 1rem; }
+  @media screen and (max-width: 780px) {
+    .order-online-block {
+      min-width: 0; } }
 
 .order-online-header {
   color: #492e17;
